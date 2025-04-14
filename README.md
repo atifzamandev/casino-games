@@ -1,54 +1,23 @@
-# React + TypeScript + Vite
+# React app to display Comeon games
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project overview
 
-Currently, two official plugins are available:
+The purpose of this project is to utilize JSON backend to create login functionality and then display games to the logged in users where they can also search and filter games to play.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Initial Project Setup
 
-## Expanding the ESLint configuration
+The project is created from scratch by installing the following packages/features which are being used to achieve the desired functionality and optimize app performance.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- TypeScript: Adds type safety to the code and catches errors at compile time.
+- Semantic UI: For styling the app. It helps in developing visually appealing and responsive UIs.
+- React Router DOM: To add navigation features and define routes in our single-page application.
+- Axios: To make HTTP requests efficiently and handle automatic data transformation.
+- React Query: To manage server state, data fetching, caching, and synchronization in a simpler and more efficient way.
+- Prettier: To format the code in a standardized way.
+- ESLint: To enforce consistent code quality and style across the app.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Project Steps
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Step 1
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Setup basic scaleable folder structure and clean up boilerplate to have clean code architecture. Creating routes displaying games. Completed React Query, created an API client to encapsulate the Axios logic, making the code more reusable, modular, and easier to maintain for different endpoints. Added API interfaces to show proper API data. Created API hooks to abstract the data-fetching logic and make them reusable. Also added React Query automatic caching and query management configurations.
