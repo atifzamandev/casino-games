@@ -21,3 +21,7 @@ The project is created from scratch by installing the following packages/feature
 ### Step 1
 
 Setup basic scaleable folder structure and clean up boilerplate to have clean code architecture. Creating routes displaying games. Completed React Query, created an API client to encapsulate the Axios logic, making the code more reusable, modular, and easier to maintain for different endpoints. Added API interfaces to show proper API data. Created API hooks to abstract the data-fetching logic and make them reusable. Also added React Query automatic caching and query management configurations.
+
+### Step 2
+
+Setup Semantic UI for styling. Designing homepage with logo and login form and after that adding login functionality.
