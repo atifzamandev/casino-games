@@ -24,4 +24,4 @@ Setup basic scaleable folder structure and clean up boilerplate to have clean co
 
 ### Step 2
 
-Setup Semantic UI for styling. Designing homepage with logo and login form and after that adding login functionality.
+Setup Semantic UI for styling. Designing homepage with logo and login form and after that adding login functionality. Added login functionality using conteact api. Created AuthContext, Login hook while maintaing sepration of concern. Added validations at UI level.

@@ -1,45 +1,103 @@
-import { Button, Container, Form, FormField, Grid, Icon, Input } from 'semantic-ui-react'
+import { ChangeEvent, FormEvent, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { Button, Container, Form, FormField, Grid, Icon, Input, Message } from 'semantic-ui-react'
+import { useAuth } from '../hooks/useAuth'
+import { LoginFormData } from '../types/Login'
+import LoadingSpinner from './LoadingSpinner'
 
 const LoginForm = () => {
+  const [loginForm, setLoginForm] = useState<LoginFormData>({
+    username: '',
+    password: '',
+  })
+  const { username, password } = loginForm
+  const [error, setError] = useState<string>('')
+
+  const { login, isPending: isLoading } = useAuth()
+  const navigate = useNavigate()
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target
+    setLoginForm((loginInfo) => ({ ...loginInfo, [name]: value }))
+    if (error) setError('')
+  }
+
+  const handleSubmit = async (event: FormEvent) => {
+    event.preventDefault()
+    setError('')
+
+    try {
+      await login({ username, password })
+      navigate('/games')
+    } catch (error) {
+      if (error instanceof Error) {
+        setError(error.message)
+      } else {
+        setError('An unexpected error occurred')
+      }
+    }
+  }
+
   return (
     <Container className="login">
       <Grid centered>
         <Grid.Column mobile={16} tablet={10} computer={6}>
-          <Form>
-            <Grid centered>
-              <Grid.Column width={9}>
-                <FormField required>
-                  <Input icon="user" placeholder="Username" name="username" required aria-required="true" />
-                </FormField>
+          {isLoading ? (
+            <LoadingSpinner text="Logging in..." />
+          ) : (
+            <Form onSubmit={handleSubmit}>
+              <Grid centered>
+                <Grid.Column width={9}>
+                  <FormField required>
+                    <Input
+                      icon="user"
+                      placeholder="Username"
+                      name="username"
+                      value={username}
+                      required
+                      aria-required="true"
+                      onChange={handleChange}
+                    />
+                  </FormField>
 
-                <FormField required>
-                  <Input
-                    icon="lock"
-                    placeholder="Password"
-                    type="password"
-                    name="password"
-                    required
-                    aria-required="true"
-                  />
-                </FormField>
-              </Grid.Column>
-            </Grid>
-            <Grid centered>
-              <Grid.Column width={5}>
-                <Button
-                  basic
-                  className="login-button"
-                  icon
-                  labelPosition="right"
-                  type="submit"
-                  fluid
-                  aria-label="Login to your account">
-                  Login
-                  <Icon name="chevron right" className="btn-icon" />
-                </Button>
-              </Grid.Column>
-            </Grid>
-          </Form>
+                  <FormField required>
+                    <Input
+                      icon="lock"
+                      placeholder="Password"
+                      type="password"
+                      name="password"
+                      value={password}
+                      onChange={handleChange}
+                      required
+                      aria-required="true"
+                    />
+                  </FormField>
+                </Grid.Column>
+              </Grid>
+              <Grid centered>
+                <Grid.Column width={5}>
+                  <Button
+                    basic
+                    className="login-button"
+                    icon
+                    labelPosition="right"
+                    type="submit"
+                    fluid
+                    aria-label="Login to your account">
+                    Login
+                    <Icon name="chevron right" className="btn-icon" />
+                  </Button>
+                </Grid.Column>
+              </Grid>
+              {error && (
+                <Grid centered>
+                  <Grid.Column>
+                    <Message negative content={error} />
+                  </Grid.Column>
+                </Grid>
+              )}
+            </Form>
+          )}
         </Grid.Column>
       </Grid>
     </Container>

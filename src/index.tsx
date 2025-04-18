@@ -5,13 +5,16 @@ import { RouterProvider } from 'react-router-dom'
 import 'semantic-ui-css/semantic.min.css'
 import './index.css'
 import router from './routes.tsx'
+import { AuthProvider } from './context/AuthContext.tsx'
 
 const queryClient = new QueryClient()
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
     </QueryClientProvider>
   </StrictMode>
 )

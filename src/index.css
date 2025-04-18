@@ -26,3 +26,16 @@ body {
 .ui.fluid.button.login-button .btn-icon {
   background-color: transparent !important;
 }
+
+.login-loading-segment {
+  height: 235px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.login-loading-dimmer {
+  background: #fff !important;
+}
