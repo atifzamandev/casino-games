@@ -1,14 +1,14 @@
-import { Grid, Message } from 'semantic-ui-react'
+import { Grid, GridColumn, Message } from 'semantic-ui-react'
 
 interface ErrorMessageProps {
-  error: string
+  errorMessage: string
 }
-const ErrorMessage = ({ error }: ErrorMessageProps) => {
+const ErrorMessage = ({ errorMessage }: ErrorMessageProps) => {
   return (
     <Grid centered>
-      <Grid.Column>
-        <Message negative content={error} />
-      </Grid.Column>
+      <GridColumn>
+        <Message negative content={errorMessage} />
+      </GridColumn>
     </Grid>
   )
 }

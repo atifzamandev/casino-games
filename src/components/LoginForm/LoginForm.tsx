@@ -1,9 +1,10 @@
 import { ChangeEvent, FormEvent, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Button, Container, Form, FormField, Grid, Icon, Input } from 'semantic-ui-react'
-import { useAuth } from '../hooks/useAuth'
-import ErrorMessage from './ErrorMessage'
-import LoadingSpinner from './LoadingSpinner'
+import { Button, Container, Form, FormField, Grid, GridColumn, Icon, Input } from 'semantic-ui-react'
+import { useAuth } from '../../hooks/useAuth'
+import ErrorMessage from '../ErrorMessage'
+import LoadingSpinner from '../LoadingSpinner'
+import './LoginForm.css'
 
 const LoginForm = () => {
   const { login, isPending: isLoading, loginForm, setLoginForm } = useAuth()
@@ -36,14 +37,14 @@ const LoginForm = () => {
   return (
     <Container className="login">
       <Grid centered>
-        <Grid.Column mobile={16} tablet={10} computer={6}>
+        <GridColumn mobile={16} tablet={10} computer={6}>
           <Form onSubmit={handleSubmit}>
             {isLoading ? (
               <LoadingSpinner text="Logging in..." />
             ) : (
               <>
                 <Grid centered>
-                  <Grid.Column width={9}>
+                  <GridColumn width={9}>
                     <FormField required>
                       <Input
                         icon="user"
@@ -68,10 +69,10 @@ const LoginForm = () => {
                         aria-required="true"
                       />
                     </FormField>
-                  </Grid.Column>
+                  </GridColumn>
                 </Grid>
                 <Grid centered>
-                  <Grid.Column width={5}>
+                  <GridColumn width={5}>
                     <Button
                       basic
                       className="login-button"
@@ -83,13 +84,13 @@ const LoginForm = () => {
                       Login
                       <Icon name="chevron right" className="btn-icon" />
                     </Button>
-                  </Grid.Column>
+                  </GridColumn>
                 </Grid>
-                {error && <ErrorMessage error={error} />}
+                {error && <ErrorMessage errorMessage={error} />}
               </>
             )}
           </Form>
-        </Grid.Column>
+        </GridColumn>
       </Grid>
     </Container>
   )

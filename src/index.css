@@ -1,31 +1,30 @@
-.home-page {
+body {
   background-color: #444;
-  min-height: 100vh;
-}
-.login {
-  background-color: #ffffff;
-  margin: 0 auto;
-  padding: 1.5em 1em 6em;
 }
 
-.ui.fluid[class*='left labeled'].icon.button,
-.ui.fluid[class*='right labeled'].icon.button {
-  padding-left: 0em !important;
-  padding-right: 1.5em !important;
-}
-.ui.fluid.button.login-button {
-  height: 40px;
-  background-color: transparent !important;
-  color: #000000;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.ui.fluid.button.login-button:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+.games-container {
+  width: calc(100% - 400px) !important;
+  background-color: #fff;
+  margin: 0 auto !important;
+  min-width: 320px !important;
 }
 
-.ui.fluid.button.login-button .btn-icon {
-  background-color: transparent !important;
+@media (max-width: 1200px) {
+  .games-container {
+    width: calc(100% - 200px) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .games-container {
+    width: calc(100% - 40px) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .games-container {
+    width: 100% !important;
+  }
 }
 
 .login-loading-segment {
@@ -39,4 +38,16 @@
 
 .login-loading-dimmer {
   background: #fff !important;
+}
+.ui.fluid.button.login-button .btn-icon {
+  background-color: transparent !important;
+}
+
+.ui.secondary.button.logout-button {
+  height: 50px;
+  font-size: 18px;
+  padding-left: 4rem !important;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 30px;
 }

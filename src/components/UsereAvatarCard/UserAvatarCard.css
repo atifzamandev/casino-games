@@ -1,0 +1,26 @@
+.ui.card {
+  box-shadow: none;
+}
+.user-avatar-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 18px;
+}
+
+.user-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 2rem;
+}
+.card-header {
+  font-size: 22px !important ;
+}
+
+.card-description {
+  font-size: 15px;
+  color: #000 !important;
+  font-weight: 600;
+}
