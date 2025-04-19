@@ -7,7 +7,7 @@ import LoadingSpinner from '../LoadingSpinner'
 import './LoginForm.css'
 
 const LoginForm = () => {
-  const { login, isPending: isLoading, loginForm, setLoginForm } = useAuth()
+  const { login, isPending: isLoggingIn, loginForm, setLoginForm } = useAuth()
   const { username, password } = loginForm
   const [error, setError] = useState<string>('')
   const navigate = useNavigate()
@@ -39,7 +39,7 @@ const LoginForm = () => {
       <Grid centered>
         <GridColumn mobile={16} tablet={10} computer={6}>
           <Form onSubmit={handleSubmit}>
-            {isLoading ? (
+            {isLoggingIn ? (
               <LoadingSpinner text="Logging in..." />
             ) : (
               <>

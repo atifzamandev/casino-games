@@ -28,7 +28,7 @@ Setup Semantic UI for styling. Designing homepage with logo and login form and a
 
 ### Step 3
 
-Added UserAvatarCard, LogoutButton with functionality and SearchGame components. Refactored component structure and styles for better scalability and maintainability. All components have been organized into appropriate folders, each with its own dedicated style file. Added responsive styling.
+Added UserAvatarCard, LogoutButton with functionality and SearchGame components. Refactored component structure and styles for better scalability and maintainability. All components have been organized into appropriate folders, each with its own dedicated style file. Added responsive styling. Secure games route with route protection from unauthorized access. Improved error page.
 
 ## Future Tasks
 
