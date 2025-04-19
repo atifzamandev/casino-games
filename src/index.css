@@ -1,5 +1,6 @@
-body {
+.home-page {
   background-color: #444;
+  min-height: 100vh;
 }
 .login {
   background-color: #ffffff;

@@ -5,7 +5,7 @@ import LoginForm from '../components/LoginForm'
 
 const HomePage: FC = () => {
   return (
-    <main className="body">
+    <main className="home-page">
       <Container>
         <header>
           <ComeonLogo />
