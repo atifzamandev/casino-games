@@ -1,6 +1,11 @@
+import NavBar from '../components/NavBar'
 
 const Games = () => {
-  return <div>Games</div>
+  return (
+    <>
+      <NavBar />
+    </>
+  )
 }
 
 export default Games

@@ -1,7 +1,8 @@
 import { ChangeEvent, FormEvent, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Button, Container, Form, FormField, Grid, Icon, Input, Message } from 'semantic-ui-react'
+import { Button, Container, Form, FormField, Grid, Icon, Input } from 'semantic-ui-react'
 import { useAuth } from '../hooks/useAuth'
+import ErrorMessage from './ErrorMessage'
 import LoadingSpinner from './LoadingSpinner'
 
 const LoginForm = () => {
@@ -84,13 +85,7 @@ const LoginForm = () => {
                     </Button>
                   </Grid.Column>
                 </Grid>
-                {error && (
-                  <Grid centered>
-                    <Grid.Column>
-                      <Message negative content={error} />
-                    </Grid.Column>
-                  </Grid>
-                )}
+                {error && <ErrorMessage error={error} />}
               </>
             )}
           </Form>

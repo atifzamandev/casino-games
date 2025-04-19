@@ -1,5 +1,5 @@
 import axios, { AxiosRequestConfig } from 'axios'
-import { LoginFormData } from '../types/Login'
+import { LoginFormData, LogoutRequest } from '../types/Login'
 
 const gamesApiInstance = axios.create({
   baseURL: import.meta.env.VITE_APP_API_BASE_URL || 'http://localhost:3001',
@@ -21,6 +21,11 @@ class GamesApiClient<T> {
     const loginInfo = { username, password }
 
     const response = await gamesApiInstance.post<T>(this.endpoint, loginInfo)
+    return response.data
+  }
+
+  postLogout = async ({ username }: LogoutRequest): Promise<T> => {
+    const response = await gamesApiInstance.post<T>(this.endpoint, { username })
     return response.data
   }
 }
