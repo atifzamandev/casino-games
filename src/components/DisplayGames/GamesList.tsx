@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { Divider, Grid, GridRow, Header } from 'semantic-ui-react'
+import { Divider, Grid, GridColumn, GridRow, Header } from 'semantic-ui-react'
 import useGames from '../../hooks/useGames'
 import ErrorMessage from '../ErrorMessage'
 import LoadingSpinner from '../LoadingSpinner'
@@ -16,14 +16,16 @@ const GamesList = () => {
   return (
     <Grid className='games-typography'>
       <GridRow className='game-list-heading'>
-        <Header size='large'>Games</Header>
+        <GridColumn>
+          <Header size='large'>Games</Header>
+        </GridColumn>
       </GridRow>
 
       {gamesData.map((game) => (
         <Fragment key={game.code}>
           <Divider />
           <GridRow>
-            <GameCard icon={game.icon} name={game.name} description={game.description} />
+            <GameCard icon={game.icon} name={game.name} description={game.description} code={game.code} />
           </GridRow>
         </Fragment>
       ))}

@@ -5,7 +5,7 @@
 
 .game-list-heading {
   padding: 0 !important;
-  margin-left: 2rem !important;
+  margin-left: 1rem !important;
 }
 .games-spacing {
   margin-left: 1rem !important;
@@ -40,4 +40,14 @@
     margin: auto 1rem;
     text-align: justify;
   }
+}
+
+.ui.secondary.button.play-game-button {
+  font-size: 22px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ui[class*='right labeled'].icon.button {
+  padding-right: 4rem !important;
 }

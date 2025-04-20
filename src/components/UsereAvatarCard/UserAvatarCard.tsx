@@ -10,17 +10,17 @@ const UserAvatarCard = () => {
   const { name, event, avatar } = player
 
   return (
-    <div className="user-avatar-card">
+    <div className='user-avatar-card'>
       <Image
-        className="user-avatar"
-        floated="right"
+        className='user-avatar'
+        floated='right'
         src={avatar ? `${import.meta.env.VITE_APP_API_BASE_URL}/${avatar}` : 'https://placehold.co/60x60'}
-        alt="User Avatar"
+        alt='User Avatar'
       />
       <Card>
         <CardContent>
-          <CardHeader className="card-header">{name}</CardHeader>
-          <CardDescription className="card-description">{event}</CardDescription>
+          <CardHeader className='card-header'>{name}</CardHeader>
+          <CardDescription className='card-description'>{event}</CardDescription>
         </CardContent>
       </Card>
     </div>

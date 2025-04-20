@@ -34,6 +34,10 @@ Added UserAvatarCard, LogoutButton with functionality and SearchGame components.
 
 Created categories component to display games categories on the left side. Display games list using game card. Some small code improvements.
 
+### Step 5
+
+Developed game play screen for the logged in users to load the selected game and button functionality to return to the games list.
+
 ## Future Tasks & Suggestions
 
 - Extensive styling improvement such is fonts, sizing, spacing etc.
@@ -41,3 +45,4 @@ Created categories component to display games categories on the left side. Displ
 - Some components need to be more structured if the project size increases.
 - For pixel perfect a proper figma design required.
 - Create loading skeleton instead of using simple loader
+- Create custom button component with props as it is being used on different places.
