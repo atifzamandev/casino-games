@@ -2,6 +2,14 @@ body {
   background-color: #444;
 }
 
+.error-page {
+  height: '100vh';
+  display: 'flex';
+  justify-content: 'center';
+  align-items: 'flex-start';
+  padding-top: '20vh';
+}
+
 .games-container {
   width: calc(100% - 400px) !important;
   background-color: #fff;

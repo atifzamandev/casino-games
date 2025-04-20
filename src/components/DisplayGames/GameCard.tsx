@@ -9,21 +9,21 @@ interface GameCardProps {
 
 const GameCard = ({ name, description, icon }: GameCardProps) => (
   <Card fluid>
-    <Grid stackable className="game-card">
+    <Grid stackable className='game-card'>
       <GridRow>
         <GridColumn width={4}>
           <Image
-            src={`${import.meta.env.VITE_APP_API_BASE_URL}/${icon}`}
+            src={icon ? `${import.meta.env.VITE_APP_API_BASE_URL}/${icon}` : 'https://placehold.co/300x150'}
             alt={`Image for ${name}`}
-            className="game-card-image"
+            className='game-card-image'
           />
         </GridColumn>
         <GridColumn width={12}>
           <CardContent>
-            <CardHeader as="h3" className="game-card-header">
+            <CardHeader as='h3' className='game-card-header'>
               {name}
             </CardHeader>
-            <CardDescription className="game-card-description">{description}</CardDescription>
+            <CardDescription className='game-card-description'>{description}</CardDescription>
           </CardContent>
         </GridColumn>
       </GridRow>

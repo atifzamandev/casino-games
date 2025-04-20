@@ -28,14 +28,13 @@ const UserLogoutButton = () => {
       <Button
         secondary
         icon
-        labelPosition="left"
+        labelPosition='left'
         onClick={handleLogout}
         loading={isLoggingOut}
-        aria-label="Logout from account"
-        className="logout-button"
-        >
+        aria-label='Logout from account'
+        className='logout-button'>
         Log Out
-        <Icon name="chevron left" className="btn-icon" />
+        <Icon name='chevron left' className='btn-icon' />
       </Button>
       {error && <ErrorMessage errorMessage={error} />}
     </div>

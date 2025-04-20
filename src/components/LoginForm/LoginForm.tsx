@@ -35,38 +35,38 @@ const LoginForm = () => {
   }
 
   return (
-    <Container className="login">
+    <Container className='login'>
       <Grid centered>
         <GridColumn mobile={16} tablet={10} computer={6}>
           <Form onSubmit={handleSubmit}>
             {isLoggingIn ? (
-              <LoadingSpinner text="Logging in..." />
+              <LoadingSpinner text='Logging in...' />
             ) : (
               <>
                 <Grid centered>
                   <GridColumn width={9}>
                     <FormField required>
                       <Input
-                        icon="user"
-                        placeholder="Username"
-                        name="username"
+                        icon='user'
+                        placeholder='Username'
+                        name='username'
                         value={username}
                         required
-                        aria-required="true"
+                        aria-required='true'
                         onChange={handleChange}
                       />
                     </FormField>
 
                     <FormField required>
                       <Input
-                        icon="lock"
-                        placeholder="Password"
-                        type="password"
-                        name="password"
+                        icon='lock'
+                        placeholder='Password'
+                        type='password'
+                        name='password'
                         value={password}
                         onChange={handleChange}
                         required
-                        aria-required="true"
+                        aria-required='true'
                       />
                     </FormField>
                   </GridColumn>
@@ -75,14 +75,14 @@ const LoginForm = () => {
                   <GridColumn width={5}>
                     <Button
                       basic
-                      className="login-button"
+                      className='login-button'
                       icon
-                      labelPosition="right"
-                      type="submit"
+                      labelPosition='right'
+                      type='submit'
                       fluid
-                      aria-label="Login to your account">
+                      aria-label='Login to your account'>
                       Login
-                      <Icon name="chevron right" className="btn-icon" />
+                      <Icon name='chevron right' className='btn-icon' />
                     </Button>
                   </GridColumn>
                 </Grid>

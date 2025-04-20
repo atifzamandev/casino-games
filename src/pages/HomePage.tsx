@@ -3,7 +3,7 @@ import LoginForm from '../components/LoginForm/LoginForm'
 
 const HomePage: FC = () => {
   return (
-    <main className="body">
+    <main className='body'>
       <LoginForm />
     </main>
   )

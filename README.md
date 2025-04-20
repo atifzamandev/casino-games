@@ -40,3 +40,4 @@ Created categories component to display games categories on the left side. Displ
 - Additional styling improvements are needed to make components use their own styles instead of relying on global styling.
 - Some components need to be more structured if the project size increases.
 - For pixel perfect a proper figma design required.
+- Create loading skeleton instead of using simple loader

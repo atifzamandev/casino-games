@@ -3,9 +3,9 @@ import './SearchGame.css'
 
 const SearchGame = () => {
   return (
-    <Grid className="search-field">
-      <GridColumn className="search-column">
-        <Search placeholder="Search Game" />
+    <Grid className='search-field'>
+      <GridColumn className='search-column'>
+        <Search placeholder='Search Game' />
       </GridColumn>
     </Grid>
   )

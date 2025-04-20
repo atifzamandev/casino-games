@@ -11,12 +11,12 @@ const GamesList = () => {
 
   if (isLoading) return <LoadingSpinner text={'Loading games...'} />
 
-  if (error || !gamesData?.length) return <ErrorMessage errorMessage="Failed to load games. Please try again." />
+  if (error || !gamesData?.length) return <ErrorMessage errorMessage='Failed to load games. Please try again.' />
 
   return (
-    <Grid className="games-typography">
-      <GridRow className="game-list-heading">
-        <Header size="large">Games</Header>
+    <Grid className='games-typography'>
+      <GridRow className='game-list-heading'>
+        <Header size='large'>Games</Header>
       </GridRow>
 
       {gamesData.map((game) => (

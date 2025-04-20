@@ -9,7 +9,7 @@ const ProtectedRoute = ({ children }: ProtectedRouteProps) => {
   const { player } = useAuth()
 
   if (!player) {
-    return <Navigate to="/" replace />
+    return <Navigate to='/' replace />
   }
 
   return children

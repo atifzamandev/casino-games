@@ -3,7 +3,7 @@ import comeonLogo from '../assets/images/logo.svg'
 
 const ComeonLogo = () => (
   <Container>
-    <Image src={comeonLogo} alt="Comeon Logo" centered loading="lazy" />
+    <Image src={comeonLogo} alt='Comeon Logo' centered loading='lazy' />
   </Container>
 )
 

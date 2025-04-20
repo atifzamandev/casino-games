@@ -10,14 +10,14 @@ const CategoriesList = () => {
   if (isLoading) return <LoadingSpinner text={'Categories loading...'} />
 
   if (error || !gameCategories?.length)
-    return <ErrorMessage errorMessage="Failed to load categories. Please try again." />
+    return <ErrorMessage errorMessage='Failed to load categories. Please try again.' />
 
   return (
     <Grid>
       <GridColumn>
-        <Header size="large">Categories</Header>
+        <Header size='large'>Categories</Header>
         <Divider />
-        <List className="games-typography games-spacing">
+        <List className='games-typography games-spacing'>
           {gameCategories.map((category) => (
             <ListItem key={category.id}>{category.name}</ListItem>
           ))}

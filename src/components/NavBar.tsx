@@ -11,7 +11,7 @@ const NavBar = () => {
         <UserLogoutButton />
       </GridColumn>
 
-      <GridColumn mobile={16} tablet={8} computer={8} verticalAlign="middle">
+      <GridColumn mobile={16} tablet={8} computer={8} verticalAlign='middle'>
         <SearchGame />
       </GridColumn>
     </Grid>

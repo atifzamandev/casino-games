@@ -5,21 +5,21 @@ import NavBar from '../components/NavBar'
 
 const Games = () => {
   return (
-    <Container className="games-container">
+    <Container className='games-container'>
       <NavBar />
-      <Grid stackable className="games-grid">
-        <GridRow only="mobile tablet">
+      <Grid stackable className='games-grid'>
+        <GridRow only='mobile tablet'>
           <GridColumn>
             <CategoriesList />
           </GridColumn>
         </GridRow>
 
-        <GridRow className="games-content">
+        <GridRow className='games-content'>
           <GridColumn mobile={16} tablet={16} computer={12}>
             <GamesList />
           </GridColumn>
 
-          <GridColumn only="computer" width={4}>
+          <GridColumn only='computer' width={4}>
             <CategoriesList />
           </GridColumn>
         </GridRow>
