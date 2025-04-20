@@ -1,0 +1,43 @@
+.games-typography {
+  font-size: 1.5em !important;
+  font-weight: 700;
+}
+
+.game-list-heading {
+  padding: 0 !important;
+  margin-left: 2rem !important;
+}
+.games-spacing {
+  margin-left: 1rem !important;
+}
+.game-card-image {
+  width: 300px !important;
+  margin-top: 2rem;
+}
+
+.game-card-header {
+  margin-top: 0.5rem !important;
+  font-size: 1.5em !important;
+}
+
+.game-card-description {
+  font-weight: 500 !important;
+  line-height: 1.5;
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  .game-card-image {
+    margin: 1rem auto;
+    display: block;
+  }
+
+  .game-card-header {
+    text-align: center;
+  }
+
+  .game-card-description {
+    margin: auto 1rem;
+    text-align: justify;
+  }
+}

@@ -5,7 +5,6 @@ body {
 .games-container {
   width: calc(100% - 400px) !important;
   background-color: #fff;
-  margin: 0 auto !important;
   min-width: 320px !important;
 }
 
@@ -25,6 +24,13 @@ body {
   .games-container {
     width: 100% !important;
   }
+}
+
+.ui.grid {
+  margin: 0 !important;
+}
+.games-content {
+  margin-top: 2rem !important;
 }
 
 .login-loading-segment {

@@ -28,9 +28,15 @@ Setup Semantic UI for styling. Designing homepage with logo and login form and a
 
 ### Step 3
 
-Added UserAvatarCard, LogoutButton with functionality and SearchGame components. Refactored component structure and styles for better scalability and maintainability. All components have been organized into appropriate folders, each with its own dedicated style file. Added responsive styling. Secure games route with route protection from unauthorized access. Improved error page.
+Added UserAvatarCard, LogoutButton with functionality and SearchGame components. Refactored component structure and styles for better scalability and maintainability. All components have been organized into appropriate folders, each with its own dedicated style file. Added responsive styling. Secured games route with route protection from unauthorized access. Improved error page.
 
-## Future Tasks
+### Step 4
+
+Created categories component to display games categories on the left side. Display games list using game card. Some small code improvements.
+
+## Future Tasks & Suggestions
 
 - Extensive styling improvement such is fonts, sizing, spacing etc.
-- Instead of global styling implement component based styling.
+- Additional styling improvements are needed to make components use their own styles instead of relying on global styling.
+- Some components need to be more structured if the project size increases.
+- For pixel perfect a proper figma design required.
