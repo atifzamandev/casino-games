@@ -7,10 +7,11 @@ import { CategoryId } from '../types/Games'
 
 const Games = () => {
   const [selectedCategoryId, setSelectedCategoryId] = useState<CategoryId>(CategoryId.ALL)
+  const [searchText, setSearchText] = useState<string>('')
 
   return (
     <Container className='games-container'>
-      <NavBar />
+      <NavBar searchText={searchText} onSearch={setSearchText} />
       <Grid stackable className='games-grid'>
         <GridRow only='mobile tablet'>
           <GridColumn>
@@ -20,7 +21,7 @@ const Games = () => {
 
         <GridRow className='games-content'>
           <GridColumn mobile={16} tablet={16} computer={12}>
-            <GamesList selectedCategoryId={selectedCategoryId} />
+            <GamesList selectedCategoryId={selectedCategoryId} searchText={searchText} />
           </GridColumn>
 
           <GridColumn only='computer' width={4}>

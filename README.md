@@ -8,6 +8,7 @@ The purpose of this project is to utilize JSON backend to create login functiona
 
 The project is created from scratch by installing the following packages/features which are being used to achieve the desired functionality and optimize app performance.
 
+- React 18: The project uses React 18 due to compatibility limitations—Semantic UI and some other dependencies currently do not support React 19 and contain legacy code.
 - TypeScript: Adds type safety to the code and catches errors at compile time.
 - Semantic UI: For styling the app. It helps in developing visually appealing and responsive UIs.
 - React Router DOM: To add navigation features and define routes in our single-page application.
@@ -40,7 +41,11 @@ Developed game play screen for the logged in users to load the selected game and
 
 ### Step 6
 
-Implemented category-based filtering. Users can filter games by selecting a category. Refactored categories component for scalability and maintainability. Extracted CategoryItem into a reusable, isolated component. Improved structure and readability for easier future updates
+Implemented category-based filtering. Users can filter games by selecting a category. Refactored categories component for scalability and maintainability. Extracted CategoryItem into a reusable, isolated component. Improved structure and readability for easier future updates.
+
+### Step 7
+
+Implemented live search functionality alongside category-based filtering. Optimized the filtering logic to efficiently handle large datasets.
 
 ## Future Tasks & Suggestions
 

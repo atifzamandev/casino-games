@@ -1,11 +1,21 @@
-import { Grid, GridColumn, Search } from 'semantic-ui-react'
+import { ChangeEvent } from 'react'
+import { Grid, GridColumn, Input } from 'semantic-ui-react'
 import './SearchGame.css'
 
-const SearchGame = () => {
+interface SearchGameProps {
+  searchText: string
+  onSearch: (searchText: string) => void
+}
+
+const SearchGame = ({ searchText, onSearch }: SearchGameProps) => {
+  const handleSearch = (event: ChangeEvent<HTMLInputElement>) => {
+    onSearch(event.target.value)
+  }
+
   return (
     <Grid className='search-field'>
       <GridColumn className='search-column'>
-        <Search placeholder='Search Game' />
+        <Input icon='search' placeholder='Search Game' value={searchText} onChange={handleSearch} fluid />
       </GridColumn>
     </Grid>
   )

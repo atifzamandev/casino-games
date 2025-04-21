@@ -3,7 +3,12 @@ import SearchGame from './SearchGame/SearchGame'
 import UserAvatarCard from './UsereAvatarCard/UserAvatarCard'
 import UserLogoutButton from './UserLogoutButton'
 
-const NavBar = () => {
+interface NavBarProps {
+  searchText: string
+  onSearch: (searchText: string) => void
+}
+
+const NavBar = ({ searchText, onSearch }: NavBarProps) => {
   return (
     <Grid stackable>
       <GridColumn mobile={16} tablet={8} computer={8}>
@@ -12,7 +17,7 @@ const NavBar = () => {
       </GridColumn>
 
       <GridColumn mobile={16} tablet={8} computer={8} verticalAlign='middle'>
-        <SearchGame />
+        <SearchGame searchText={searchText} onSearch={onSearch} />
       </GridColumn>
     </Grid>
   )
