@@ -55,3 +55,21 @@ Implemented live search functionality alongside category-based filtering. Optimi
 - For pixel perfect a proper figma design required.
 - Create loading skeleton instead of using simple loader
 - Create custom button component with props as it is being used on different places.
+
+### Screenshots
+
+#### 1. Login Page
+
+![Login Page](./screenshots/login.png)
+
+#### 2. Games List
+
+![Games List](./screenshots/games-list.png)
+
+#### 3. Search & Filter
+
+![Search and Filter](./screenshots/search.png)
+
+#### 4. Game Play View
+
+![Game Play](./screenshots/gameplay.png)
