@@ -72,4 +72,4 @@ Implemented live search functionality alongside category-based filtering. Optimi
 
 #### 4. Game Play View
 
-![Game Play](./screenshots/gameplay.png)
+![Game Play](./screenshots/game-play.png)
