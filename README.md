@@ -38,6 +38,10 @@ Created categories component to display games categories on the left side. Displ
 
 Developed game play screen for the logged in users to load the selected game and button functionality to return to the games list.
 
+### Step 6
+
+Implemented category-based filtering. Users can filter games by selecting a category. Refactored categories component for scalability and maintainability. Extracted CategoryItem into a reusable, isolated component. Improved structure and readability for easier future updates
+
 ## Future Tasks & Suggestions
 
 - Extensive styling improvement such is fonts, sizing, spacing etc.
